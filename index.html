@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Apple SD Gothic Neo'}
+    span.s1 {font: 12.0px 'Apple SD Gothic Neo'}
+    span.s2 {font: 12.0px Helvetica}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ko"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;<span class="s1">흩어진</span> <span class="s1">언어</span>&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>let img;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>let words = [];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>function preload() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>img = loadImage('KakaoTalk_Photo_2025-06-11-16-42-28.jpeg');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>function setup() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>createCanvas(windowWidth, windowHeight);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>let poemWords = [</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"<span class="s1">한번의</span> <span class="s1">기지개로도</span> <span class="s1">아침에</span> <span class="s1">희망을</span> <span class="s1">볼</span> <span class="s1">수</span> <span class="s1">있다</span>",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"<span class="s1">삼촌</span> <span class="s1">입</span> <span class="s1">돌아갔대</span>. <span class="s1">왜</span> <span class="s1">늙으면</span> <span class="s1">그렇게</span> <span class="s1">초라해지는걸까</span>?",</p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">          </span>"</span>못<span class="s2"> </span>된<span class="s2"> </span>행성으로<span class="s2"> </span>잘못<span class="s2"> </span>떨어진<span class="s2"> </span>짐승의<span class="s2"> </span>눈처럼<span class="s2"> </span>애처로운<span class="s2"> </span>눈<span class="s2">",</span></p>
+<p class="p1"><span class="Apple-converted-space">          </span>"<span class="s1">네</span> <span class="s1">꿈에</span> <span class="s1">나왔던</span> <span class="s1">하얀</span> <span class="s1">펭귄이</span> <span class="s1">오늘</span> <span class="s1">내</span> <span class="s1">꿈에</span> <span class="s1">나왔다</span>",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"<span class="s1">본래</span> <span class="s1">집이</span> <span class="s1">없는</span> <span class="s1">사람들은</span> <span class="s1">집이</span> <span class="s1">많은</span> <span class="s1">법</span>",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"<span class="s1">나한테서</span> <span class="s1">배운</span> <span class="s1">것들로</span> <span class="s1">나를</span> <span class="s1">가르치는</span> <span class="s1">사람들</span>",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"<span class="s1">우리</span> <span class="s1">팔자에는</span> <span class="s1">공짜가</span> <span class="s1">없어</span>",</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"<span class="s1">아무런</span> <span class="s1">의도가</span> <span class="s1">없는</span> <span class="s1">사람은</span> <span class="s1">쉽게</span> <span class="s1">오해를</span> <span class="s1">산다</span>"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>for (let txt of poemWords) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>let size = random(14, 22);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>let col = color(random(255), random(255), random(255));</p>
+<p class="p1"><span class="Apple-converted-space">          </span>words.push(new Word(txt, random(width), random(height), size, col));</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>function draw() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background(0);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>let imgRatio = img.width / img.height;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let canvasRatio = width / height;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let drawWidth, drawHeight;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (imgRatio &gt; canvasRatio) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>drawWidth = width;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>drawHeight = width / imgRatio;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>drawHeight = height;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>drawWidth = height * imgRatio;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>image(img, (width - drawWidth) / 2, (height - drawHeight) / 2, drawWidth, drawHeight);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>for (let w of words) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>w.update();</p>
+<p class="p1"><span class="Apple-converted-space">          </span>w.display();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>function mousePressed() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>for (let w of words) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>w.pressed();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>function mouseDragged() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>for (let w of words) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>w.drag();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>function mouseReleased() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>for (let w of words) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>w.released();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>class Word {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>constructor(txt, x, y, fontSize, fontColor) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>this.txt = txt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>this.x = x;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>this.y = y;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>this.fontSize = fontSize;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>this.fontColor = fontColor;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>this.dragging = false;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>this.offsetX = 0;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>this.offsetY = 0;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>this.speed = random(0.3, 1.2);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>update() {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if (!this.dragging) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>this.x += this.speed;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (this.x &gt; width) {</p>
+<p class="p1"><span class="Apple-converted-space">              </span>this.x = -textWidth(this.txt);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>display() {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>textFont("serif");</p>
+<p class="p1"><span class="Apple-converted-space">          </span>textSize(this.fontSize);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>fill(this.fontColor);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>text(this.txt, this.x, this.y);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>pressed() {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>let tw = textWidth(this.txt);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>let th = this.fontSize;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if (</p>
+<p class="p1"><span class="Apple-converted-space">            </span>mouseX &gt; this.x &amp;&amp; mouseX &lt; this.x + tw &amp;&amp;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>mouseY &gt; this.y - th &amp;&amp; mouseY &lt; this.y</p>
+<p class="p1"><span class="Apple-converted-space">          </span>) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>this.dragging = true;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>this.offsetX = this.x - mouseX;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>this.offsetY = this.y - mouseY;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>drag() {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if (this.dragging) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>this.x = mouseX + this.offsetX;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>this.y = mouseY + this.offsetY;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>released() {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>this.dragging = false;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
